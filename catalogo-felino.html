@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Catálogo Felino | AbaTez </title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/loguito.png">
+
+    <!-- Metadatos SEO Específicos para esta página -->
+    <meta name="description" content="Catálogo de alimentos balanceados para gatos AbaTez. Iniciador, crecimiento y engorda con la mejor conversión alimenticia.">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Configuración Tailwind (Idéntica al index) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Poppins', 'sans-serif'], },
+                    colors: {
+                        marca: { light: '#4ade80', DEFAULT: '#059669', dark: '#064e3b', },
+                        acento: { DEFAULT: '#d97706', }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .tarjeta-elegante { box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.1); }
+        .transicion-suave { transition: all 0.3s ease-in-out; }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased selection:bg-marca selection:text-white">
+
+    <!-- ==========================================
+         BARRA DE NAVEGACIÓN (HEADER)
+         ========================================== -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-500 ease-in-out bg-white/90 backdrop-blur-md h-28 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
+            <div class="flex justify-between items-center h-full">
+                
+                <!-- Logotipo de la empresa (CORREGIDO) -->
+                <div class="flex-shrink-0 h-full py-2 flex items-center cursor-pointer">
+                    <!-- El secreto: Le agregamos 'h-full flex items-center' a la etiqueta <a> -->
+                    <a href="Abatez.html" class="h-full flex items-center">
+                        <img id="logo-abatez" src="img/logo1.png" alt="Logo AbaTez" class="h-full w-auto object-contain transition-all duration-500 hover:scale-105">
+                    </a>
+                </div>
+                
+                <div class="hidden md:flex space-x-8">
+                    <a href="Abatez.html#inicio" class="text-gray-700 hover:text-marca font-medium transicion-suave">Inicio</a>
+                    <a href="Abatez.html#categorias" class="text-marca font-bold transicion-suave">Productos</a>
+                    <a href="Abatez.html#nosotros" class="text-gray-700 hover:text-marca font-medium transicion-suave">Nosotros</a>
+                    <a href="Abatez.html#contacto" class="text-gray-700 hover:text-marca font-medium transicion-suave">Contacto</a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-marca focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-white shadow-lg border-t">
+            <a href="Abatez.html#inicio" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">Inicio</a>
+            <a href="Abatez.html#categorias" class="block px-4 py-3 text-marca font-bold bg-marca/5">Productos</a>
+            <a href="Abatez.html#nosotros" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">Nosotros</a>
+            <a href="Abatez.html#contacto" class="block px-4 py-3 text-gray-700 hover:bg-gray-50">Contacto</a>
+        </div>
+    </nav>
+
+    <!-- ==========================================
+         ENCABEZADO DE SECCIÓN FELINA
+         ========================================== -->
+    <section class="relative pt-40 pb-24 lg:pt-48 lg:pb-32 bg-gray-900 overflow-hidden z-0">
+        <div class="absolute inset-0 bg-cover bg-center bg-fixed opacity-40 -z-10" style="background-image: url('img/gatos.webp');"></div>
+        
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center" data-aos="zoom-in">
+            <span class="text-marca-light font-bold tracking-wider uppercase text-sm mb-2 block">Distribución Oficial</span>
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-4">Línea Felina</h1>
+            <p class="text-lg text-gray-300 max-w-2xl mx-auto font-light">
+                Cuidado específico y sabor irresistible. Ingredientes seleccionados que protegen su sistema urinario.
+            </p>
+        </div>
+
+        <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-20 translate-y-[1px]">
+            <svg class="relative block w-full h-[30px] md:h-[50px]" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V95.8C-17.14,96.15,25.4,101.44,83.9,97.35,145.4,93.06,252.88,69.2,321.39,56.44Z" class="fill-gray-50"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         GRILLA DE PRODUCTOS ESPECÍFICOS
+         ========================================== -->
+    <section class="py-16 bg-gray-50 relative z-0">
+        
+        <!-- Glow Esmerilado de fondo -->
+        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full md:w-3/4 h-3/4 bg-marca/20 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            
+            <!-- Cuadrícula de Productos Felinos -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- PRODUCTO 1 -->
+                <div class="bg-white rounded-2xl overflow-hidden tarjeta-elegante flex flex-col h-full transform hover:-translate-y-2 transicion-suave group relative" data-aos="fade-up" data-aos-delay="100">
+                    <a href="producto-gatito.html" class="absolute inset-0 z-30"></a>
+                    <div class="p-6 flex-grow relative z-20 pointer-events-none">
+                        <div class="bg-marca/10 w-12 h-12 rounded-xl flex items-center justify-center text-marca text-2xl mb-4 group-hover:bg-marca group-hover:text-white transicion-suave">
+                            <i class="fas fa-cat group-hover:scale-110 transicion-suave"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-marca transicion-suave">Gatitos (Crecimiento)</h3>
+                        <p class="text-gray-600 text-sm mb-4">Alto contenido de proteínas y taurina para asegurar el correcto desarrollo muscular y visual en los primeros 12 meses.</p>
+                    </div>
+                    <div class="p-6 pt-0 mt-auto relative z-20 pointer-events-none">
+                        <div class="w-full bg-gray-50 text-gray-600 group-hover:bg-marca group-hover:text-white font-bold py-3 rounded-lg transicion-suave flex justify-center items-center border border-gray-100 group-hover:border-marca">
+                            Ver Detalles <i class="fas fa-arrow-right ml-2 text-sm transform group-hover:translate-x-1 transicion-suave"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 2 -->
+                <div class="bg-white rounded-2xl overflow-hidden tarjeta-elegante flex flex-col h-full transform hover:-translate-y-2 transicion-suave group relative" data-aos="fade-up" data-aos-delay="200">
+                    <a href="producto-adulto-gato.html" class="absolute inset-0 z-30"></a>
+                    <div class="p-6 flex-grow relative z-20 pointer-events-none">
+                        <div class="bg-marca/10 w-12 h-12 rounded-xl flex items-center justify-center text-marca text-2xl mb-4 group-hover:bg-marca group-hover:text-white transicion-suave">
+                            <i class="fas fa-fish group-hover:scale-110 transicion-suave"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-marca transicion-suave">Adulto Sabor Pescado/Pollo</h3>
+                        <p class="text-gray-600 text-sm mb-4">Croqueta de alta palatabilidad con minerales balanceados para prevenir problemas en el tracto urinario.</p>
+                    </div>
+                    <div class="p-6 pt-0 mt-auto relative z-20 pointer-events-none">
+                        <div class="w-full bg-gray-50 text-gray-600 group-hover:bg-marca group-hover:text-white font-bold py-3 rounded-lg transicion-suave flex justify-center items-center border border-gray-100 group-hover:border-marca">
+                            Ver Detalles <i class="fas fa-arrow-right ml-2 text-sm transform group-hover:translate-x-1 transicion-suave"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- PRODUCTO 3 -->
+                <div class="bg-white rounded-2xl overflow-hidden tarjeta-elegante flex flex-col h-full transform hover:-translate-y-2 transicion-suave group relative" data-aos="fade-up" data-aos-delay="300">
+                    <a href="producto-bolas-pelo.html" class="absolute inset-0 z-30"></a>
+                    <div class="p-6 flex-grow relative z-20 pointer-events-none">
+                        <div class="bg-marca/10 w-12 h-12 rounded-xl flex items-center justify-center text-marca text-2xl mb-4 group-hover:bg-marca group-hover:text-white transicion-suave">
+                            <i class="fas fa-leaf group-hover:scale-110 transicion-suave"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-800 mb-2 group-hover:text-marca transicion-suave">Control Bolas de Pelo</h3>
+                        <p class="text-gray-600 text-sm mb-4">Enriquecido con fibras naturales que facilitan el tránsito intestinal y reducen la formación de bolas de pelo.</p>
+                    </div>
+                    <div class="p-6 pt-0 mt-auto relative z-20 pointer-events-none">
+                        <div class="w-full bg-gray-50 text-gray-600 group-hover:bg-marca group-hover:text-white font-bold py-3 rounded-lg transicion-suave flex justify-center items-center border border-gray-100 group-hover:border-marca">
+                            Ver Detalles <i class="fas fa-arrow-right ml-2 text-sm transform group-hover:translate-x-1 transicion-suave"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PIE DE PÁGINA (FOOTER)
+         ========================================== -->
+    <footer class="bg-gray-950 text-gray-400 py-8 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p>&copy; 2026 AbaTez. Todos los derechos reservados.</p>
+            <p class="text-sm mt-2">Fabrica de alimentos balanceados de Teziutlan.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP PREMIUM -->
+    <div class="fixed bottom-6 right-6 z-50 flex items-center justify-center">
+        <!-- El anillo que palpita (Efecto ping) -->
+        <div class="absolute w-full h-full bg-green-400 rounded-full animate-ping opacity-75"></div>
+        
+        <!-- El botón real -->
+        <a href="https://wa.me/525530332731?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20alimentos%20AbaTez."
+           target="_blank"
+           class="relative bg-green-500 hover:bg-green-600 text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-2xl transform hover:scale-110 transicion-suave">
+           <i class="fab fa-whatsapp"></i>
+        </a>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ once: true, offset: 50 });
+
+        // Lógica del menú móvil
+        document.getElementById('mobile-menu-btn').addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+
+        // Efecto del Navbar
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('shadow-md', 'h-16');
+                navbar.classList.remove('h-28');
+            } else {
+                navbar.classList.remove('shadow-md', 'h-16');
+                navbar.classList.add('h-28');
+            }
+        });
+
+        // Lógica dinámica para los botones de Cotizar Producto
+        function cotizarProducto(nombreProducto) {
+            const numeroWa = "525530332731"; 
+            const textoWa = `¡Hola AbaTez! 👋%0A%0AEstaba viendo el catálogo web y me interesa cotizar el producto: *${nombreProducto}*.%0A%0A¿Me podrían dar precios por bulto/tonelada?`;
+            window.open(`https://wa.me/${numeroWa}?text=${textoWa}`, '_blank');
+        }
+    </script>
+</body>
+</html>
